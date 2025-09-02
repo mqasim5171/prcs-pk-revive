@@ -24,6 +24,18 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				humanitarian: {
+					DEFAULT: 'hsl(var(--humanitarian))',
+					foreground: 'hsl(var(--humanitarian-foreground))'
+				},
+				hope: {
+					DEFAULT: 'hsl(var(--hope))',
+					foreground: 'hsl(var(--hope-foreground))'
+				},
+				trust: {
+					DEFAULT: 'hsl(var(--trust))',
+					foreground: 'hsl(var(--trust-foreground))'
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
