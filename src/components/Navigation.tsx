@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Heart, Users, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,21 +25,23 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="text-foreground hover:text-humanitarian transition-colors">
+            <Link to="/about" className="text-foreground hover:text-humanitarian transition-colors">
               About
-            </a>
-            <a href="#services" className="text-foreground hover:text-humanitarian transition-colors">
+            </Link>
+            <Link to="/services" className="text-foreground hover:text-humanitarian transition-colors">
               Services
-            </a>
-            <a href="#volunteer" className="text-foreground hover:text-humanitarian transition-colors">
+            </Link>
+            <Link to="/volunteer" className="text-foreground hover:text-humanitarian transition-colors">
               Volunteer
-            </a>
-            <a href="#contact" className="text-foreground hover:text-humanitarian transition-colors">
+            </Link>
+            <Link to="/contact" className="text-foreground hover:text-humanitarian transition-colors">
               Contact
-            </a>
-            <Button variant="default" className="bg-humanitarian hover:bg-humanitarian/90">
-              Donate Now
-            </Button>
+            </Link>
+            <Link to="/donate">
+              <Button variant="default" className="bg-humanitarian hover:bg-humanitarian/90">
+                Donate Now
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -53,38 +56,40 @@ const Navigation = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background border-t">
-              <a
-                href="#about"
+              <Link
+                to="/about"
                 className="block px-3 py-2 text-foreground hover:text-humanitarian transition-colors"
                 onClick={toggleMenu}
               >
                 About
-              </a>
-              <a
-                href="#services"
+              </Link>
+              <Link
+                to="/services"
                 className="block px-3 py-2 text-foreground hover:text-humanitarian transition-colors"
                 onClick={toggleMenu}
               >
                 Services
-              </a>
-              <a
-                href="#volunteer"
+              </Link>
+              <Link
+                to="/volunteer"
                 className="block px-3 py-2 text-foreground hover:text-humanitarian transition-colors"
                 onClick={toggleMenu}
               >
                 Volunteer
-              </a>
-              <a
-                href="#contact"
+              </Link>
+              <Link
+                to="/contact"
                 className="block px-3 py-2 text-foreground hover:text-humanitarian transition-colors"
                 onClick={toggleMenu}
               >
                 Contact
-              </a>
+              </Link>
               <div className="px-3 py-2">
-                <Button variant="default" className="w-full bg-humanitarian hover:bg-humanitarian/90">
-                  Donate Now
-                </Button>
+                <Link to="/donate">
+                  <Button variant="default" className="w-full bg-humanitarian hover:bg-humanitarian/90">
+                    Donate Now
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

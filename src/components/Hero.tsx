@@ -41,6 +41,7 @@ const Hero = () => {
             <Button
               size="lg"
               className="bg-humanitarian hover:bg-humanitarian/90 shadow-humanitarian text-lg px-8 py-3"
+              onClick={() => window.location.href = '/volunteer'}
             >
               Become a Volunteer
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -49,6 +50,7 @@ const Hero = () => {
               variant="outline"
               size="lg"
               className="border-humanitarian text-humanitarian hover:bg-humanitarian hover:text-humanitarian-foreground text-lg px-8 py-3"
+              onClick={() => window.location.href = '/services'}
             >
               Learn First Aid
             </Button>
