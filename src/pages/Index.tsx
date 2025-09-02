@@ -5,6 +5,8 @@ import Services from "@/components/Services";
 import GetInvolved from "@/components/GetInvolved";
 import Footer from "@/components/Footer";
 
+// PRCS Website - Pakistan Red Crescent Society
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
