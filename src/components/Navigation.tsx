@@ -13,7 +13,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
             <div className="w-10 h-10 bg-gradient-humanitarian rounded-full flex items-center justify-center">
               <Heart className="w-6 h-6 text-humanitarian-foreground" />
             </div>
@@ -21,7 +21,7 @@ const Navigation = () => {
               <h1 className="text-xl font-bold text-foreground">PRCS</h1>
               <p className="text-xs text-muted-foreground">Pakistan Red Crescent</p>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
