@@ -24,18 +24,27 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/about" className="text-foreground hover:text-humanitarian transition-colors">
-              About
+          <div className="hidden md:flex items-center space-x-6">
+            <Link to="/news" className="text-foreground hover:text-humanitarian transition-colors text-sm">
+              Happening Now
             </Link>
-            <Link to="/services" className="text-foreground hover:text-humanitarian transition-colors">
-              Services
+            <Link to="/who-we-are" className="text-foreground hover:text-humanitarian transition-colors text-sm">
+              Who We Are
             </Link>
-            <Link to="/volunteer" className="text-foreground hover:text-humanitarian transition-colors">
-              Volunteer
+            <Link to="/our-work" className="text-foreground hover:text-humanitarian transition-colors text-sm">
+              Our Work
             </Link>
-            <Link to="/contact" className="text-foreground hover:text-humanitarian transition-colors">
-              Contact
+            <Link to="/get-involved" className="text-foreground hover:text-humanitarian transition-colors text-sm">
+              Get Involved
+            </Link>
+            <Link to="/publications" className="text-foreground hover:text-humanitarian transition-colors text-sm">
+              Publications
+            </Link>
+            <Link to="/e-shop" className="text-foreground hover:text-humanitarian transition-colors text-sm">
+              E-Shop
+            </Link>
+            <Link to="/contact" className="text-foreground hover:text-humanitarian transition-colors text-sm">
+              Contact Us
             </Link>
             <Link to="/donate">
               <Button variant="default" className="bg-humanitarian hover:bg-humanitarian/90">
@@ -57,32 +66,53 @@ const Navigation = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background border-t">
               <Link
-                to="/about"
+                to="/news"
                 className="block px-3 py-2 text-foreground hover:text-humanitarian transition-colors"
                 onClick={toggleMenu}
               >
-                About
+                Happening Now
               </Link>
               <Link
-                to="/services"
+                to="/who-we-are"
                 className="block px-3 py-2 text-foreground hover:text-humanitarian transition-colors"
                 onClick={toggleMenu}
               >
-                Services
+                Who We Are
               </Link>
               <Link
-                to="/volunteer"
+                to="/our-work"
                 className="block px-3 py-2 text-foreground hover:text-humanitarian transition-colors"
                 onClick={toggleMenu}
               >
-                Volunteer
+                Our Work
+              </Link>
+              <Link
+                to="/get-involved"
+                className="block px-3 py-2 text-foreground hover:text-humanitarian transition-colors"
+                onClick={toggleMenu}
+              >
+                Get Involved
+              </Link>
+              <Link
+                to="/publications"
+                className="block px-3 py-2 text-foreground hover:text-humanitarian transition-colors"
+                onClick={toggleMenu}
+              >
+                Publications
+              </Link>
+              <Link
+                to="/e-shop"
+                className="block px-3 py-2 text-foreground hover:text-humanitarian transition-colors"
+                onClick={toggleMenu}
+              >
+                E-Shop
               </Link>
               <Link
                 to="/contact"
                 className="block px-3 py-2 text-foreground hover:text-humanitarian transition-colors"
                 onClick={toggleMenu}
               >
-                Contact
+                Contact Us
               </Link>
               <div className="px-3 py-2">
                 <Link to="/donate">

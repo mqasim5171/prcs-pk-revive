@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Badge } from "@/components/ui/badge";
 import { Heart, Shield, Users, HandHeart, CreditCard, Phone } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -185,6 +186,70 @@ const Donate = () => {
                       </CardContent>
                     </Card>
                   ))}
+                </div>
+              </div>
+              {/* Payment Method */}
+              <div>
+                <Label className="text-lg font-semibold mb-4 block">Payment Method</Label>
+                <div className="space-y-4">
+                  <Card className="cursor-pointer hover:shadow-md border-2 border-humanitarian">
+                    <CardContent className="p-4">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <CreditCard className="w-6 h-6 text-humanitarian" />
+                          <div>
+                            <h4 className="font-semibold">Credit/Debit Card</h4>
+                            <p className="text-sm text-muted-foreground">Secure online payment</p>
+                          </div>
+                        </div>
+                        <Badge>Recommended</Badge>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <Label htmlFor="card-number">Card Number</Label>
+                      <Input
+                        id="card-number"
+                        placeholder="1234 5678 9012 3456"
+                        className="mt-2"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="card-name">Cardholder Name</Label>
+                      <Input
+                        id="card-name"
+                        placeholder="Full name as on card"
+                        className="mt-2"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <Label htmlFor="expiry">Expiry Date</Label>
+                      <Input
+                        id="expiry"
+                        placeholder="MM/YY"
+                        className="mt-2"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="cvv">CVV</Label>
+                      <Input
+                        id="cvv"
+                        placeholder="123"
+                        className="mt-2"
+                        maxLength={3}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <Shield className="w-4 h-4" />
+                    <span>Your payment information is secured with 256-bit SSL encryption</span>
+                  </div>
                 </div>
               </div>
 
